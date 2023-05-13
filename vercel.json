@@ -5,12 +5,14 @@
       {
           "src": "dist/server.js",
           "use": "@vercel/node"
+
       }
   ],
   "routes": [
       {
           "src": "/(.*)",
-          "dest": "/"
+
+          "dest": "dist/server.js"
       }
   ]
 }
