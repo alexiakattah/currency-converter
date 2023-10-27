@@ -27,6 +27,10 @@ describe('Currency conversion controller', () => {
   describe('GET /v1/convert/USD/{value}', () => {
     it('should return status code 200 and converted values for valid input', async () => {
       const response = await request(app).get('/v1/convert/USD/100');
+      console.log(
+        '🚀 ~ file: currencyConversionController.test.ts:30 ~ it ~ response:',
+        response.body,
+      );
 
       expect(response.status).toBe(200);
       expect(response.body).toEqual({
